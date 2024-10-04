@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+
+      nav {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(248, 245, 245, 0.19);
+        filter: opacity(1);
+      }
+
+      #img {
+        width: 80px;
+        border-radius: 50px;
+      }
+
+      .items {
+        font-size: 25px;
+        font-weight: bolder;
+        color: chocolate;
+      }
+
+      #mainCont {
+        width: 98vw;
+        height: 100vh;
+        /* border: 2px solid black; */
+        background-image: url("https://www.licious.in/blog/wp-content/uploads/2023/01/Shutterstock_2047827035-1024x683.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      #biryani {
+        width: 900px;
+        height: 415px;
+        color: rgb(255, 252, 252);
+        position: absolute;
+        font-size: 20px;
+        z-index: 25px;
+        line-height: 35px;
+        margin-top: 150px;
+        margin-left: 350px;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav id="nav">
+        <div id="logo">
+          <img src="chef.jpg" alt="" id="img" />
+        </div>
+        <div class="items">Home</div>
+        <div class="items">About</div>
+        <div class="items">Contact us</div>
+      </nav>
+    </header>
+    <section id="mainCont">
+      <div id="biryani">
+        Biryani is more than just food; it's an emotion that resonates deeply
+        with people across cultures and regions. A single plate of biryani can
+        evoke a flood of memories, whether it’s a family gathering, a
+        celebration, or a cherished comfort meal after a long day. For many,
+        biryani is a symbol of tradition, passed down through generations with
+        recipes that hold a family’s culinary secrets. The delicate blend of
+        fragrant basmati rice, tender meat or vegetables, and aromatic spices
+        creates a symphony of flavors that not only satisfies hunger but also
+        stirs the soul. It's a dish that transcends mere sustenance—each bite
+        brings a sense of connection to home, to loved ones, and to the rich
+        heritage it represents. Biryani also holds a special place in
+        friendships and social circles. A spontaneous plan to share biryani
+        brings people together, fostering moments of joy, laughter, and bonding.
+        In some cultures, biryani is served during weddings and festive
+        occasions, adding a sense of celebration to the feast, turning it into a
+        shared emotional experience. Whether it’s the excitement of waiting for
+        a plate of piping hot biryani to be served, the comfort of savoring its
+        flavors after a long day, or the nostalgia of childhood memories,
+        biryani has the unique power to evoke warmth, happiness, and
+        contentment. It's a dish that speaks to the heart, not just the taste
+        buds, making it a universal emotional connection.
+      </div>
+    </section>
+  </body>
+</html>

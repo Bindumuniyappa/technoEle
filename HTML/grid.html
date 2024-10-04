@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #grid-cont {
+        width: 100vw;
+        height: 50vh;
+        background-color: aqua;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        text-align: center;
+      }
+      .item1 {
+        /* width: 100px;
+        height: 100px; */
+        background-color: #a12525;
+        border: 5px solid black;
+      }
+      #one {
+        grid-column-start: 1;
+        grid-column-end: 5;
+      }
+      #two {
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+
+      #three {
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+      #five {
+        grid-column-start: 2;
+        grid-column-end: 5;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grid-cont">
+      <div id="one" class="item1">Header</div>
+      <div id="two" class="item1">Menu</div>
+      <div id="three" class="item1">MAin</div>
+      <div id="four" class="item1">Right</div>
+      <div id="five" class="item1">Footer</div>
+    </div>
+  </body>
+</html>
