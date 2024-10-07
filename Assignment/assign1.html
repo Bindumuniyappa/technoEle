@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Responsive Bizland</title>
+    <style>
+      /* Basic Styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      #nav1 {
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+
+      #contact {
+        display: flex;
+        gap: 20px;
+      }
+
+      #icon i {
+        margin: 0 10px;
+        cursor: pointer;
+      }
+
+      #nav2 {
+        background-color: #343a40;
+        color: white;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      #nav2 h1 {
+        margin: 0;
+      }
+
+      #nav-items {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      #nav-items div {
+        color: white;
+        cursor: pointer;
+      }
+
+      #main {
+        text-align: center;
+        padding: 50px;
+        background: url("https://via.placeholder.com/1500x600") no-repeat center
+          center;
+        background-size: cover;
+        color: white;
+      }
+
+      #sub-main {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 40px;
+        border-radius: 10px;
+        display: inline-block;
+      }
+
+      .btn {
+        margin: 10px;
+      }
+
+      /* Media Queries for Responsiveness */
+      @media (max-width: 768px) {
+        #contact {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        #nav-items {
+          flex-direction: column;
+          text-align: center;
+          gap: 10px;
+        }
+
+        #nav2 {
+          justify-content: center;
+          text-align: center;
+        }
+
+        #nav2 h1 {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        #main {
+          padding: 20px;
+        }
+
+        #sub-main {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav id="nav1">
+      <div id="contact">
+        <div>
+          <i class="fa-regular fa-envelope fa-sm"></i> contact@example.com
+        </div>
+        <div>
+          <i class="fa-solid fa-mobile-screen-button fa-sm"></i> +253584675652
+        </div>
+      </div>
+      <div id="icon">
+        <i class="fa-brands fa-facebook fa-sm"></i>
+        <i class="fa-brands fa-square-twitter fa-sm"></i>
+        <i class="fa-brands fa-instagram fa-sm"></i>
+        <i class="fa-brands fa-linkedin fa-sm"></i>
+      </div>
+    </nav>
+    <nav id="nav2" class="navbar-expand">
+      <h1>BIZLAND</h1>
+      <div id="nav-items">
+        <div><a class="nav-link" href="#home">Home</a></div>
+        <div>About</div>
+        <div>Services</div>
+        <div>Portfolio</div>
+        <div>Team</div>
+        <div>Drop Down</div>
+        <div>Contact</div>
+      </div>
+    </nav>
+    <div id="main" class="container-fluid">
+      <div id="sub-main">
+        <h1>Welcome to <span class="text text-primary">BIZLAND</span></h1>
+        <h4>
+          We are a team of talented designers making websites with bootstrap.
+        </h4>
+        <button class="btn btn-primary">GET STARTED</button>
+        <button class="btn btn-primary">Watch Video</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+#nav1{
+    width: 100%;
+    height: 40px;
+display: flex;
+background-color: rgb(54, 54, 230);  
+justify-content: space-around;
+align-items: center;
+color: white;
+}
+
+#contact{
+    width: 500px;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-around;
+}
+
+#icon{
+    width: 200px;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav2{
+    width:100%;
+    height:60px;
+    border: 2px solid black;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    z-index: 2;
+    top: 0px;
+}
+
+#nav-items{
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#main{
+    width: 100%;
+    height:80vh;
+    background-image: url("hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#sub-main{
+    width:100%;
+    /* border:1px solid black; */
+    padding: 180px;
+}
+
+/* About Page */
+
+#about-sec{
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid red; */
+}
+
+#about-sub{
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 250px;
+}
+
+#office{
+    width: 100%;
+    height: 400px;
+}
+
+#about-sec2{
+ /* border: 1px solid blue; */
+display: flex;
+}
+
+#service-cont{
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid red; */
+}
+
+#service-sub{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 250px;
+}
+
+#team-cont{
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid red; */
+}
+
+#portfolio-cont{
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid red; */
+}
+
+#contact-cont{
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid red; */
+}
+
+#contact-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* border: 1px solid black; */
+    gap: 20px;
+}
+
+.item{ 
+    border: 1px solid black;
+}
+
+#item1{
+    grid-column: 1 / 3;
+}
+
+#item4{
+    grid-column: 1/3;
+}
+
+#item5{
+    grid-column: 3/5;
+}
