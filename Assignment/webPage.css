@@ -1,4 +1,4 @@
-#nav1{
+/* #nav1{
     width: 100%;
     height: 40px;
 display: flex;
@@ -10,14 +10,13 @@ color: white;
 
 #contact{
     width: 500px;
-    /* border: 2px solid black; */
+    
     display: flex;
     justify-content: space-around;
 }
 
 #icon{
     width: 200px;
-    /* border: 2px solid white; */
     display: flex;
     justify-content: space-between;
 }
@@ -51,16 +50,192 @@ color: white;
 
 #sub-main{
     width:100%;
-    /* border:1px solid black; */
     padding: 180px;
+} */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Styling for nav1 */
+#nav1 {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    background-color: rgb(54, 54, 230);
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding: 0 20px;
+}
+
+#contact {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#icon {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for nav2 */
+#nav2 {
+    width: 100%;
+    height: 60px;
+    /* border: 2px solid black; */
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    z-index: 2;
+    top: 0px;
+    padding: 0 20px;
+}
+
+#nav-items {
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Styling for main content */
+#main {
+    width: 100%;
+    height: 80vh;
+    background-image: url("hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sub-main {
+    width: 100%;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Styles */
+
+/* For tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    #nav1 {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    #contact {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #icon {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #nav2 {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    #nav-items {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #sub-main {
+        padding: 60px 20px;
+    }
+}
+
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    #contact {
+        width: auto;
+        gap: 5px;
+    }
+
+    #icon {
+        width: auto;
+        gap: 5px;
+    }
+
+    #nav-items {
+        gap: 5px;
+    }
+
+    #sub-main {
+        padding: 40px 10px;
+        font-size: 14px;
+    }
+}
+/* Hamburger Menu Button */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hide navigation items by default for small screens */
+#nav-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+    #nav-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        /* Adjust based on the height of nav2 */
+        left: 0;
+        border-top: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    #nav-items.show {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
+        color: black;
+        position: absolute;
+        right: 20px;
+        top: 18px;
+    }
+}
 /* About Page */
 
-#about-sec{
+/* #about-sec{
     width: 100%;
     height: 80%;
-    /* border: 1px solid red; */
 }
 
 #about-sub{
@@ -77,14 +252,107 @@ color: white;
 }
 
 #about-sec2{
- /* border: 1px solid blue; */
 display: flex;
+} */
+/* General Styles */
+#about-sec {
+    width: 100%;
+    padding: 50px 20px;
+    /* Added padding for spacing */
 }
 
-#service-cont{
+#about-sub {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    /* Centered and added bottom margin */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Centered text */
+}
+
+#office {
+    width: 100%;
+    height: auto;
+    /* Ensures the image is responsive */
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    /* Optional styling for rounded corners */
+}
+
+#about-sec2 {
+    display: flex;
+    flex-direction: row;
+    /* Keeps image and text side by side */
+    align-items: center;
+    gap: 20px;
+    /* Added spacing between image and text */
+}
+
+#about-sec2 div {
+    flex: 1;
+    /* Ensures both elements take equal space */
+}
+
+#about-sec2 .mx-2 {
+    flex: 1;
+    /* Makes sure the text area takes equal space next to the image */
+}
+
+/* Responsive Styles */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    #about-sec {
+        padding: 20px;
+        /* Reduced padding for better spacing */
+    }
+
+    #about-sub {
+        width: 100%;
+        margin-left: 0;
+        /* Removed fixed margin for better centering */
+    }
+
+    #about-sec2 {
+        flex-direction: column;
+        /* Stack image and description for smaller screens */
+        text-align: center;
+        gap: 20px;
+    }
+
+    #office {
+        max-height: 300px;
+    }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    #about-sub {
+        width: 100%;
+        padding: 0 10px;
+        /* Reduced padding for smaller screens */
+    }
+
+    #about-sec2 {
+        gap: 15px;
+        /* Reduced gap for smaller screens */
+    }
+
+    #office {
+        max-height: 200px;
+    }
+}
+
+
+/* service page */
+/* #service-cont{
     width: 100%;
     height: 80%;
-    /* border: 1px solid red; */
+    
 }
 
 #service-sub{
@@ -95,30 +363,346 @@ display: flex;
     align-items: center;
     margin-top: 150px;
     margin-left: 250px;
+} */
+
+/* General Styles */
+#service-cont {
+    width: 100%;
+    padding: 50px 20px;
+    /* Added padding for better spacing */
 }
 
-#team-cont{
+#service-sub {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    /* Centered and added bottom margin */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Centered text for better readability */
+}
+
+.card {
+    width: 100%;
+    max-width: 18rem;
+    /* Limits the width of each card */
+    margin: 15px;
+    /* Added margin for spacing */
+    flex: 1 1 calc(33% - 30px);
+    /* Makes cards responsive in a 3-column layout with gap */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow to the cards */
+    transition: transform 0.3s ease-in-out;
+    /* Adds a hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    /* Ensures image fits nicely in the card */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* Adds rounded corners to the image */
+}
+
+/* Responsive Styles */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    #service-sub {
+        width: 100%;
+        margin-left: 0;
+        /* Removed fixed margin for better centering */
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 20px);
+        /* Adjusts to 2-column layout for tablets */
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    #service-sub {
+        width: 100%;
+        padding: 0 10px;
+        /* Reduced padding for smaller screens */
+    }
+
+    .card {
+        flex: 1 1 100%;
+        /* Makes the cards stack vertically for smaller screens */
+        max-width: 100%;
+    }
+}
+
+
+/* team styling */
+/* #team-cont{
     width: 100%;
     height: 80%;
-    /* border: 1px solid red; */
+    
 }
 
 #portfolio-cont{
     width: 100%;
     height: 80%;
-    /* border: 1px solid red; */
+    
+} */
+ #team-cont {
+     width: 100%;
+     padding: 50px 20px;
+     /* Added padding for spacing */
+     background-color: #f8f9fa;
+     /* Optional: background color for contrast */
+ }
+
+ #service-sub {
+     width: 80%;
+     max-width: 800px;
+     margin: 0 auto 30px;
+     /* Centering the header section */
+     text-align: center;
+     /* Center text in this section */
+ }
+
+ .d-flex.flex-wrap {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     /* Center the cards horizontally */
+     gap: 20px;
+     /* Space between cards */
+ }
+
+ .card {
+     width: 15rem;
+     /* Fixed width for cards */
+     height: 18rem;
+     /* Fixed height for cards */
+     margin: 0;
+     /* Remove additional margins */
+ }
+
+ .card img {
+     width: 100%;
+     height: auto;
+     /* Ensure images maintain aspect ratio */
+ }
+
+ /* Responsive Styles */
+
+ /* Tablets (max-width: 768px) */
+ @media (max-width: 768px) {
+     #service-sub {
+         width: 90%;
+         /* Adjust width for smaller screens */
+     }
+
+     .card {
+         width: 14rem;
+         /* Adjust card width */
+         height: auto;
+         /* Allow height to adjust automatically */
+     }
+ }
+
+ /* Mobile Devices (max-width: 480px) */
+ @media (max-width: 480px) {
+     #service-sub {
+         width: 95%;
+         /* Wider for mobile */
+     }
+
+     .card {
+         width: 100%;
+         /* Full width on mobile */
+         max-width: 300px;
+         /* Maximum width */
+     }
+ }
+
+/* General Styles */
+#team-cont {
+    width: 100%;
+    padding: 50px 20px;
+    /* Added padding for spacing */
 }
 
-#contact-cont{
+#service-sub {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    /* Centered and added bottom margin */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Centered text for better readability */
+}
+
+.card {
+    width: 100%;
+    max-width: 15rem;
+    /* Limits the width of each card */
+    height: 18rem;
+    /* Sets a fixed height */
+    margin: 15px;
+    /* Added margin for spacing */
+    flex: 1 1 calc(25% - 30px);
+    /* Makes cards responsive in a 4-column layout with gap */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow to the cards */
+    transition: transform 0.3s ease-in-out;
+    /* Adds a hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+}
+
+.card-img-top {
+    height: 10rem;
+    object-fit: cover;
+    /* Ensures image fits nicely in the card */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* Adds rounded corners to the image */
+}
+
+.card-body {
+    padding: 10px;
+    text-align: center;
+    /* Centered text in the card body */
+}
+
+/* Responsive Styles */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    #service-sub {
+        width: 100%;
+        margin-left: 0;
+        /* Removed fixed margin for better centering */
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 20px);
+        /* Adjusts to 2-column layout for tablets */
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    #service-sub {
+        width: 100%;
+        padding: 0 10px;
+        /* Reduced padding for smaller screens */
+    }
+
+    .card {
+        flex: 1 1 100%;
+        /* Makes the cards stack vertically for smaller screens */
+        max-width: 100%;
+    }
+}
+
+/* portfolio page */
+/* General Styles */
+#portfolio-cont {
+    width: 100%;
+    padding: 50px 20px;
+    /* Padding for spacing */
+}
+
+#service-sub {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#service-sub .d-flex {
+    margin-top: 20px;
+}
+
+.d-flex.justify-content-evenly {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* Space between cards */
+}
+
+.card {
+    width: 15rem;
+    margin: 20px;
+    /* Margin for space between cards */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    /* Ensure images are responsive */
+}
+
+/* Responsive Styles */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    #portfolio-cont {
+        padding: 30px 10px;
+        /* Reduced padding for smaller screens */
+    }
+
+    .card {
+        width: 14rem;
+        /* Adjusted card width for smaller devices */
+    }
+
+    #service-sub .d-flex {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    #service-sub {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+
+    .card {
+        width: 100%;
+        /* Cards take full width on mobile */
+        max-width: 300px;
+        /* Maximum width to prevent cards from being too large */
+    }
+}
+/* #contact-cont{
     width: 100%;
     height: 80%;
-    /* border: 1px solid red; */
+    
 }
 
 #contact-grid{
     display: grid;
     grid-template-columns: auto auto auto auto;
-    /* border: 1px solid black; */
     gap: 20px;
 }
 
@@ -136,4 +720,95 @@ display: flex;
 
 #item5{
     grid-column: 3/5;
+} */
+
+/* General Styles */
+/* General Styles */
+#contact-cont {
+    width: 100%;
+    padding: 50px 20px;
+    /* Added padding for spacing */
+}
+
+#service-sub {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.item {
+    border: 1px solid black;
+    padding: 20px;
+    /* Added padding for inner spacing */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Added subtle shadow for better appearance */
+}
+
+#item1,
+#item4 {
+    grid-column: 1 / 3;
+}
+
+#item5 {
+    grid-column: 3 / 5;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    /* Ensures the image is responsive */
+}
+
+/* Responsive Styles */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    #contact-grid {
+        grid-template-columns: 1fr 1fr;
+        /* Changes grid to 2 columns */
+        gap: 15px;
+        /* Reduced gap for smaller screens */
+    }
+
+    #item1,
+    #item4,
+    #item5 {
+        grid-column: 1 / 3;
+        /* Makes items take full width of 2 columns */
+    }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    #contact-grid {
+        grid-template-columns: 1fr;
+        /* Changes grid to 1 column */
+        gap: 10px;
+        /* Reduced gap for small screens */
+    }
+
+    .item {
+        grid-column: 1 / -1;
+        /* Items take full width */
+    }
+
+    #item5 input,
+    #item5 textarea {
+        width: calc(100% - 20px);
+        /* Makes inputs and textareas responsive */
+        margin: 10px 0;
+        /* Adds margin between fields */
+        padding: 10px;
+        /* Improves input padding */
+    }
 }
