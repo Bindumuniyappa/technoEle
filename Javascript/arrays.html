@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let obj = {
+        name: "bindu",
+        id: "101",
+        "work exp": 2,
+      };
+      console.log(obj);
+
+      let myFunc = () => {
+        let ab = "a" + "b";
+        let bc = "b" + "c";
+        let ac = "a" + "c";
+        return { ab, bc, ac }; //can also return by array and when your going to return more than 1 value the last value will be the output(updated)
+      };
+      console.log(myFunc());
+
+      //IIFE
+
+      (function () {
+        let a = "name";
+        console.log(a);
+      })();
+
+      //lexical scope
+      let ab = 10;
+      function a() {
+        // let ab = 20;
+        function b() {
+          function c() {
+            console.log(ab);
+          }
+          c();
+        }
+        b();
+      }
+      a();
+      console.log(ab);
+
+      ///clouser
+
+      function gp() {
+        let x = 100;
+        let y = 200;
+        console.log(x);
+        function p() {
+          const z = 300;
+          function c() {
+            let a = 400;
+            console.log(x, y, z, a);
+          }
+          c();
+        }
+        p();
+      }
+      gp();
+
+      //for in loop
+
+      let obj1 = {
+        name: "bindu",
+        dept: "IT",
+      };
+      for (let key in obj1) {
+        console.log(key);
+      }
+    </script>
+  </body>
+</html>

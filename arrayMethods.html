@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //syntax of map method
+      //   array.map(callback(currentValue, index, array), thisArg);
+
+      //array
+      const numbers = [1, 2, 3, 4, 5];
+      const doubled = numbers.map((num) => num * 2);
+      console.log(doubled); // Output: [2, 4, 6, 8, 10]
+
+      //     numbers.map() iterates through each element in the numbers array.
+      // The callback function (num) => num * 2 takes each number and multiplies it by 2.
+      // The result is a new array [2, 4, 6, 8, 10]
+
+      //object
+      const users = [
+        { id: 1, name: "Alice" },
+        { id: 2, name: "Bob" },
+        { id: 3, name: "Charlie" },
+      ];
+
+      const userNames = users.map((user) => user.name);
+      console.log(userNames); // Output: ['Alice', 'Bob', 'Charlie']
+
+      //filter()
+      //   Returns a new array containing all elements that pass a test (provided by a callback function).
+      //   const numbers = [1, 2, 3, 4, 5];
+      //   const evenNumbers = numbers.filter((num) => num % 2 === 0);
+      //   console.log(evenNumbers); // Output: [2, 4]
+
+      //sort()
+      //   Sorts the elements of an array in place and returns the sorted array.
+      //   const numbers = [5, 3, 8, 1];
+      //   numbers.sort((a, b) => a - b);
+      //   console.log(numbers); // Output: [1, 3, 5, 8]
+
+      //forEach()
+      // Executes a provided function once for each array element.
+      //   const numbers = [1, 2, 3];
+      //   numbers.forEach((num) => console.log(num * 2));
+      // Output: 2 4 6 (on separate lines)
+
+      //concat()
+      //   Merges two or more arrays and returns a new array
+      //   const arr1 = [1, 2];
+      //   const arr2 = [3, 4];
+      //   const mergedArray = arr1.concat(arr2);
+      //   console.log(mergedArray); // Output: [1, 2, 3, 4]
+
+      //every()
+
+      //   const numbers = [2, 4, 6];
+      //   const allEven = numbers.every((num) => num % 2 === 0);
+      //   console.log(allEven); // Output: true
+
+      //some()
+      //   const numbers = [1, 2, 3];
+      //   const hasEven = numbers.some((num) => num % 2 === 0);
+      //   console.log(hasEven); // Output: true
+
+      //includes
+      //   Determines whether an array includes a certain value.
+      //   const numbers = [1, 2, 3];
+      //   const hasTwo = numbers.includes(2);
+      //   console.log(hasTwo); // Output: true
+
+      //   join()
+      // Joins all elements of an array into a string.
+      //   const elements = ["Fire", "Water", "Earth"];
+      //   const joined = elements.join(" - ");
+      //   console.log(joined); // Output: 'Fire - Water - Earth'
+
+      // reduce()
+      // Executes a reducer function on each array element to produce a single output value.
+      //   const numbers = [1, 2, 3, 4];
+      //   const sum = numbers.reduce((acc, num) => acc + num, 0);
+      //   console.log(sum); // Output: 10
+
+      //   find()
+      // Returns the value of the first element that satisfies the provided test function.
+      //   const numbers = [1, 2, 3, 4];
+      //   const firstEven = numbers.find((num) => num % 2 === 0);
+      //   console.log(firstEven); // Output: 2
+
+      //   findIndex()
+      // Returns the index of the first element that satisfies the provided test function.
+      //   const numbers = [1, 2, 3, 4];
+      //   const firstEvenIndex = numbers.findIndex((num) => num % 2 === 0);
+      //   console.log(firstEvenIndex); // Output: 1
+
+      //   indexOf()
+      // Returns the first index at which a given element can be found in the array.
+      //   const numbers = [1, 2, 3, 4];
+      //   const index = numbers.indexOf(3);
+      //   console.log(index); // Output: 2
+
+      //fill()
+      //   Fills all elements in an array with a static value
+      //   const numbers = [1, 2, 3, 4];
+      //   numbers.fill(0, 1, 3);
+      //   console.log(numbers); // Output: [1, 0, 0, 4]
+
+      //slice()
+      //   Returns a shallow copy of a portion of an array into a new array.
+      //   const numbers = [1, 2, 3, 4];
+      //   const sliced = numbers.slice(1, 3);
+      //   console.log(sliced); // Output: [2, 3]
+
+      //reverse()
+      //   Reverses the array in place.
+      //   const numbers = [1, 2, 3];
+      //   numbers.reverse();
+      //   console.log(numbers); // Output: [3, 2, 1]
+
+      //   push()
+      // Adds one or more elements to the end of an array and returns the new length.
+      //   const numbers = [1, 2];
+      //   numbers.push(3);
+      //   console.log(numbers); // Output: [1, 2, 3]
+
+      //pop()
+      //   Removes the last element from an array and returns that element. This method changes the length of the array
+      //   const numbers = [1, 2, 3];
+      //   const lastElement = numbers.pop();
+      //   console.log(lastElement); // Output: 3
+      //   console.log(numbers1); // Output: [1, 2]
+
+      //shift()
+      //   Removes the first element from an array and returns that element. This method also changes the length of the array.
+      //   const numbers = [1, 2, 3];
+      //   const firstElement = numbers.shift();
+      //   console.log(firstElement); // Output: 1
+      //   console.log(numbers); // Output: [2, 3]
+
+      //   unshift
+
+      // Adds one or more elements to the beginning of an array and returns the new length of the array.
+      //   const numbers = [2, 3];
+      //   const newLength = numbers.unshift(1);
+      //   console.log(numbers); // Output: [1, 2, 3]
+      //   console.log(newLength); // Output: 3
+
+      //splice
+      //   splice(start, deleteCount, ...items): Changes the contents of an array by removing or replacing existing elements and/or adding new elements.
+      //   const numbers = [1, 2, 3, 4];
+      //   numbers.splice(1, 2); // Removes 2 elements starting from index 1
+      //   console.log(numbers); // Output: [1, 4]
+
+      //flat(depth): Flattens a nested array (up to a specified depth) into a single array.
+      //   const arr = [1, [2, [3, 4]]];
+      //   const flattened = arr.flat(2);
+      //   console.log(flattened); // Output: [1, 2, 3, 4]
+
+      //flatMap(callback): Maps each element using a mapping function, then flattens the result into a new array.
+      //   const arr = [1, 2, 3];
+      //   const mapped = arr.flatMap((x) => [x, x * 2]);
+      //   console.log(mapped); // Output: [1, 2, 2, 4, 3, 6]
+
+      //copyWithin(target, start, end): Copies part of the array to another location within the same array.
+      //   const numbers = [1, 2, 3, 4, 5];
+      //   numbers.copyWithin(0, 3);
+      //   console.log(numbers); // Output: [4, 5, 3, 4, 5]
+
+      //at(index): Returns the element at the given index (positive or negative).
+      //   const arr = [10, 20, 30, 40];
+      //   console.log(arr.at(-1)); // Output: 40
+
+      //toString(): Converts an array to a string, with each element separated by a comma.
+      //   const arr = [1, 2, 3];
+      //   console.log(arr.toString()); // Output: "1,2,3"
+
+      //   isArray() (Static Method): Determines whether a value is an array.
+      //   console.log(Array.isArray([1, 2, 3])); // Output: true
+      //   console.log(Array.isArray("hello")); // Output: false
+
+      //from() (Static Method): Creates an array from an iterable (like a string or another array-like object).
+      //   const str = "hello";
+      //   const arr = Array.from(str);
+      //   console.log(arr); // Output: ["h", "e", "l", "l", "o"]
+
+      //   of() (Static Method): Creates a new array instance with a variable number of arguments.
+      //   const arr = Array.of(1, 2, 3);
+      //   console.log(arr); // Output: [1, 2, 3]
+
+      //   entries(): Returns a new array iterator object that contains the key/value pairs for each index in the array.
+      //   const arr = ["a", "b", "c"];
+      //   for (let [index, element] of arr.entries()) {
+      //     console.log(index, element); // Output: 0 'a', 1 'b', 2 'c'
+      //   }
+
+      //   keys(): Returns a new array iterator that contains the keys (indices) of each element in the array.
+
+      //   const arr = ["a", "b", "c"];
+      //   for (let key of arr.keys()) {
+      //     console.log(key); // Output: 0, 1, 2
+      //   }
+
+      //   values(): Returns a new array iterator that contains the values for each index in the array.
+
+      //   const arr = ["a", "b", "c"];
+      //   for (let value of arr.values()) {
+      //     console.log(value); // Output: 'a', 'b', 'c'
+      //   }
+
+      //   reduceRight(): Works like reduce(), but processes the array from right to left.
+
+      //   const arr = [1, 2, 3, 4];
+      //   const result = arr.reduceRight((acc, curr) => acc + curr);
+      //   console.log(result); // Output: 10
+    </script>
+  </body>
+</html>
